@@ -1,36 +1,133 @@
-<section id="Nosotros" class="about-section bg-white text-black py-12">
-  <div class="container mx-auto flex flex-col md:flex-row">
-    <div class="md:w-1/2 mt-20 md:mt-0 px-20 pt-20">
-      <img
-        src="html.jpg"
-        alt="Arquitectos"
-        class="mx-auto rounded-lg shadow-lg"
-      />
+<section id="funcionamiento" class="py-20 bg-gray-100 dark:bg-gray-800">
+  <div class="container mx-auto px-6 lg:px-16">
+    <!-- Encabezado -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+        <span class="text-blue-600 dark:text-cyan-400">Mecanismo</span> de Funcionamiento
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        Los Transformers procesan datos mediante atención multi-cabeza y capas feed-forward, eliminando la necesidad de recurrencia
+      </p>
     </div>
-    <div class="md:w-1/2 lg:pr-8 pr-0 lg:px-10 px-10 m-16 lg:-ml-10 ml-5">
-      <h2 class="text-3xl font-semibold mb-8">Experiencia Profesional</h2>
 
-      <h3 class="text-xl font-semibold mt-6 mb-4">Experiencia Laboral</h3>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Visualización interactiva -->
+      <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700">
+        <div class="relative h-80 w-full" id="attention-visualization">
+          <!-- Aquí iría un componente SVG/Canvas interactivo -->
+          <img 
+            src="/attention-mechanism.webp" 
+            alt="Mecanismo de atención en Transformers" 
+            class="w-full h-full object-contain"
+            loading="lazy"
+          />
+        </div>
+        <div class="mt-6 flex justify-center space-x-4">
+          <button class="px-4 py-2 bg-blue-100 dark:bg-gray-700 text-blue-600 dark:text-cyan-400 rounded-lg text-sm font-medium">
+            Self-Attention
+          </button>
+          <button class="px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-lg text-sm font-medium">
+            Multi-Head
+          </button>
+          <button class="px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-lg text-sm font-medium">
+            Positional Encoding
+          </button>
+        </div>
+      </div>
 
-      <p class="mb-6 leading-relaxed text-justify">
-        <strong>Desarrollador Frontend</strong><br />
-        <em>Octubre 11, 2023 - Actualidad</em><br />
-        Ingresé como becario en la empresa y, tras un periodo de aprendizaje y adaptación,
-        fui promovido a desarrollador frontend. Trabajo en un equipo de desarrollo
-        donde colaboro activamente en la creación de interfaces y experiencias de
-        usuario. Utilizo tecnologías como React, Next.js y otras herramientas para
-        el desarrollo de aplicaciones web.
-      </p>
+      <!-- Explicación paso a paso -->
+      <div class="space-y-8">
+        <div class="flex items-start">
+          <div class="bg-blue-600 dark:bg-cyan-500 text-white rounded-full p-3 mr-4 flex-shrink-0">
+            <span class="font-bold text-lg">1</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Embedding de Entrada</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Los tokens de entrada se convierten en vectores numéricos (embeddings) que capturan significado semántico
+            </p>
+          </div>
+        </div>
 
-      <p class="mb-6 leading-relaxed text-justify">
-        <strong>Desarrollador Full Stack (Proyecto Alterno)</strong><br />
-        <em>Noviembre 2024 - Actualidad</em><br />
-        Actualmente participo en un proyecto alterno en el que estamos desarrollando
-        un sistema de punto de venta (POS). Trabajo en ambas áreas: frontend y backend,
-        utilizando Angular y Bootstrap para el desarrollo frontend, y Spring Boot
-        para el backend. Este proyecto sigue en curso y continúo trabajando activamente
-        en su desarrollo y mantenimiento.
-      </p>
+        <div class="flex items-start">
+          <div class="bg-blue-600 dark:bg-cyan-500 text-white rounded-full p-3 mr-4 flex-shrink-0">
+            <span class="font-bold text-lg">2</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Atención Multi-Cabeza</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Múltiples mecanismos de atención calculan relaciones entre todas las palabras simultáneamente
+            </p>
+            <div class="mt-2 text-sm bg-blue-50 dark:bg-gray-700 p-2 rounded">
+              <code class="text-blue-600 dark:text-cyan-400">Attention(Q,K,V) = softmax(QKᵀ/√dₖ)V</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="bg-blue-600 dark:bg-cyan-500 text-white rounded-full p-3 mr-4 flex-shrink-0">
+            <span class="font-bold text-lg">3</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Red Feed-Forward</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Capas neuronales densas transforman las representaciones para añadir no-linealidad
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start">
+          <div class="bg-blue-600 dark:bg-cyan-500 text-white rounded-full p-3 mr-4 flex-shrink-0">
+            <span class="font-bold text-lg">4</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Normalización y Residuales</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Conexiones residuales y normalización de capas estabilizan el entrenamiento de modelos profundos
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ejemplo de código (opcional) -->
+    <div class="mt-16 bg-gray-800 rounded-xl p-6 max-w-4xl mx-auto">
+      <div class="flex items-center mb-4">
+        <div class="flex space-x-2 mr-4">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <span class="text-gray-300 text-sm">attention_layer.py</span>
+      </div>
+      <pre class="text-gray-200 text-sm overflow-x-auto">
+        <code class="language-python">
+class MultiHeadAttention(tf.keras.layers.Layer):
+    def __init__(self, d_model, num_heads):
+        super(MultiHeadAttention, self).__init__()
+        self.num_heads = num_heads
+        self.d_model = d_model
+        self.depth = d_model // num_heads
+        
+        self.wq = tf.keras.layers.Dense(d_model)
+        self.wk = tf.keras.layers.Dense(d_model)
+        self.wv = tf.keras.layers.Dense(d_model)
+        
+        self.dense = tf.keras.layers.Dense(d_model)
+        
+    def scaled_dot_product_attention(self, q, k, v, mask):
+        matmul_qk = tf.matmul(q, k, transpose_b=True)
+        dk = tf.cast(tf.shape(k)[-1], tf.float32)
+        scaled_attention_logits = matmul_qk / tf.math.sqrt(dk)
+        
+        if mask is not None:
+            scaled_attention_logits += (mask * -1e9)
+            
+        attention_weights = tf.nn.softmax(scaled_attention_logits, axis=-1)
+        output = tf.matmul(attention_weights, v)
+        return output, attention_weights
+        </code>
+      </pre>
     </div>
   </div>
 </section>
