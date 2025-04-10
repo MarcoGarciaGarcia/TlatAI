@@ -1,0 +1,64 @@
+<header id="landing-header" class="py-4 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white">
+    <div id="progress"></div>
+    <div class="flex flex-grow basis-0">
+        <h6 class="text-sm font-medium text-shadow">MAGG</h6>
+    </div>
+    <nav>
+        <ul class="flex text-sm">
+            <li><a href="#inicio" class="inline-block font-medium px-4 px-2 text-shadow">Inicio</a></li>
+            <li><a href="#Nosotros" class="inline-block font-medium px-4 px-2 text-shadow">Yo</a></li>
+            <li><a href="#Proyectos" class="inline-block font-medium px-4 px-2 text-shadow">Tecnologías</a></li>
+            <li><a href="#Precios" class="inline-block font-medium px-4 px-2 text-shadow">Experiencia</a></li>
+            <li><a href="#Contacto" class="inline-block font-medium px-4 px-2 text-shadow">Contacto</a></li>
+        </ul>        
+    </nav>
+    <nav class="flex flex-grow justify-end basis-0">
+        <ul class="flex text-sm [&>li>a]:text-current [&>li>a]:inline-block [&>li>a]:font-medium [&>li>a]:px-4 [&>li>a]:px-2">
+            <li><a href="#" class="text-shadow">Sección</a></li>
+            <li><a href="#" class="text-shadow">Sección</a></li>
+            <li><a href="#" class="text-shadow">Sección</a></li>
+            <li><a href="#" class="text-shadow">Sección</a></li>
+        </ul>
+    </nav>
+</header>
+<script>
+    const header = document.querySelector('#landing-header') as HTMLElement
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.90,
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry=>{
+            const {isIntersecting} = entry
+            if (isIntersecting){
+                const color = entry.target.getAttribute("data-header-color")
+                header.style.color = color
+            }
+            
+        }, observerOptions)
+
+        const sections = document.querySelectorAll(".landing-section")
+        sections.forEach(section=>observer.observe(section))
+
+    })
+</script>
+<script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+<style>
+	#progress{
+		position: fixed;
+		top: 0;
+		width: 0%;
+		background: BLACK;
+		height: 1em;
+
+        animation: progress-grow auto linear;
+        animation-timeline: scroll(root);
+	}
+
+    @keyframes progress-grow {
+        from { width: 0%; }
+        to { width: 100%; }
+    }
+</style>

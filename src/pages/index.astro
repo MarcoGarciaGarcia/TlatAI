@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FirstSection from '../components/FirstSection.astro';
+import SecondSection from '../components/SecondSection.astro';
+import ThirtSection from '../components/ThirtSection.astro';
+import StaticHeader from '../components/Header.astro';
+import Who from '../components/Who.astro';
+import Porfolio from '../components/Portfolio.astro';
+import Contact from '../components/Contact.astro';
+import Experiencia from '../components/Experiencia.astro';
+import Formacion from '../components/Formacion.astro';
+import Adicional from '../components/Adicional.astro';
+---
+
+<Layout title="Construye">
+	<StaticHeader/>
+	<main class="relative w-full h-screen overflow-auto">
+		<div class="">
+			<FirstSection/>
+		</div>
+		<div class="">
+			<Who/>
+		</div>
+		<div class="">
+			<Experiencia/>
+		</div>
+		<div class="">
+			<Formacion />
+		</div>
+		<div class="">
+			<Adicional />
+		</div>
+		<div class="">
+			<Porfolio/>
+		</div>
+		<div class="">
+			<SecondSection/>
+		</div>
+		<div class="">
+			<Contact/>
+		</div>
+		<div class="snap-center">
+			<ThirtSection/>
+		</div>
+	</main>
+</Layout>
