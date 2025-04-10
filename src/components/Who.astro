@@ -1,58 +1,96 @@
 <section id="que-son" class="py-20 bg-gray-50 dark:bg-gray-900">
-    <div class="container mx-auto px-6 lg:px-16">
-      <div class="flex flex-col lg:flex-row gap-12 items-center">
-        <!-- Contenido textual -->
-        <div class="lg:w-1/2">
-          <h2 class="text-4xl font-bold mb-8 text-blue-600 dark:text-cyan-400">
-            ¿Qué son las <span class="text-gray-800 dark:text-white">Redes Transformer?</span>
-          </h2>
-          
-          <div class="space-y-6 text-gray-700 dark:text-gray-300">
-            <p class="text-lg leading-relaxed">
-              Los <strong class="text-blue-600 dark:text-cyan-400">Transformers</strong> son una arquitectura de redes neuronales introducida en 2017 que revolucionó el procesamiento de secuencias mediante el mecanismo de <strong>atención auto-supervisada</strong>.
-            </p>
-            
-            <p class="text-lg leading-relaxed">
-              A diferencia de las RNNs o LSTMs, no requieren procesamiento secuencial, permitiendo:
-            </p>
-            
-            <ul class="space-y-3 pl-5 list-disc marker:text-blue-500">
-              <li>Procesamiento en <strong>paralelo</strong> de todos los elementos de entrada</li>
-              <li>Captura de <strong>dependencias a largo plazo</strong> en los datos</li>
-              <li>Mayor escalabilidad para datasets masivos</li>
-              <li>Arquitectura unificada para múltiples dominios (NLP, visión, audio)</li>
-            </ul>
-            
-            <p class="text-lg leading-relaxed">
-              Son la base de modelos como GPT, BERT y T5 que dominan el estado del arte en NLP.
+  <div class="container mx-auto px-6 lg:px-16">
+    <div class="flex flex-col lg:flex-row gap-12 items-center">
+      <!-- Contenido textual -->
+      <div class="lg:w-1/2">
+        <h2 class="text-4xl font-bold mb-8 text-blue-600 dark:text-cyan-400">
+          ¿Qué son las <span class="text-gray-800 dark:text-white"
+            >Redes Transformer?</span
+          >
+        </h2>
+
+        <div class="space-y-6 text-gray-700 dark:text-gray-300">
+          <p class="text-lg leading-relaxed">
+            Los <strong class="text-blue-600 dark:text-cyan-400"
+              >Transformers</strong
+            > son una arquitectura de redes neuronales introducida en 2017 que revolucionó
+            el procesamiento de secuencias mediante el mecanismo de <strong
+              >atención auto-supervisada</strong
+            >.
+          </p>
+
+          <p class="text-lg leading-relaxed">
+            A diferencia de las RNNs o LSTMs, no requieren procesamiento
+            secuencial, permitiendo:
+          </p>
+
+          <ul class="space-y-3 pl-5 list-disc marker:text-blue-500">
+            <li>
+              Procesamiento en <strong>paralelo</strong> de todos los elementos de
+              entrada
+            </li>
+            <li>
+              Captura de <strong>dependencias a largo plazo</strong> en los datos
+            </li>
+            <li>Mayor escalabilidad para datasets masivos</li>
+            <li>
+              Arquitectura unificada para múltiples dominios (NLP, visión,
+              audio)
+            </li>
+          </ul>
+
+          <p class="text-lg leading-relaxed">
+            Son la base de modelos como GPT, BERT y T5 que dominan el estado del
+            arte en NLP.
+          </p>
+        </div>
+      </div>
+
+      <!-- Visualización técnica -->
+      <div class="lg:w-1/2">
+        <div
+          class="bg-white dark:bg-gray-800 p-6 justify-center grid justify-items-center rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700"
+        >
+          <img
+            src="https://www.aprendemachinelearning.com/wp-content/uploads/2022/11/transformers_arquitectura_inputs.png"
+            alt="Diagrama de arquitectura Transformer"
+            class="w-auto rounded-lg h-96 justify-center"
+            loading="lazy"
+          />
+          <div
+            class="mt-4 text-sm text-center text-gray-500 dark:text-gray-400"
+          >
+            <p>
+              Arquitectura original del paper <em
+                >"Attention is All You Need"</em
+              > (Vaswani et al., 2017)
             </p>
           </div>
         </div>
-        
-        <!-- Visualización técnica -->
-        <div class="lg:w-1/2">
-          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700">
-            <img 
-              src="/transformer-architecture.webp" 
-              alt="Diagrama de arquitectura Transformer" 
-              class="w-full h-auto rounded-lg"
-              loading="lazy"
-            />
-            <div class="mt-4 text-sm text-center text-gray-500 dark:text-gray-400">
-              <p>Arquitectura original del paper <em>"Attention is All You Need"</em> (Vaswani et al., 2017)</p>
-            </div>
-          </div>
-          
-          <!-- CTA para sección técnica -->
-          <div class="mt-8 text-center">
-            <a href="#arquitectura" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-medium hover:shadow-lg transition-all">
-              Ver detalles técnicos
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </a>
-          </div>
+
+        <!-- CTA para sección técnica -->
+        <div class="mt-8 text-center">
+          <a
+            href="https://papers.neurips.cc/paper/7181-attention-is-all-you-need.pdf"
+            class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-lg font-medium hover:shadow-lg transition-all"
+            target="_blank"
+          >
+            Ver detalles técnicos
+            <svg
+              class="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

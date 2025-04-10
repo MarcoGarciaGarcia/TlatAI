@@ -1,51 +1,415 @@
-<section id="Idiomas" class="about-section bg-white text-black py-16">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-semibold text-gray-800 mb-10 animate__animated animate__fadeIn">Idiomas</h2>
-  
-      <div class="flex justify-center space-x-16">
-        <div class="text-center p-6 bg-white shadow-lg rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-          <h3 class="text-2xl font-semibold mb-4 text-black">Español</h3>
-          <p class="text-xl text-gray-700">Nativo</p>
+<section id="arquitectura" class="py-20 bg-gray-50 dark:bg-gray-900">
+  <div class="container mx-auto px-6 lg:px-16">
+    <!-- Encabezado -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+        <span class="text-blue-600 dark:text-cyan-400">Arquitectura</span> Transformer
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        La estructura innovadora que revolucionó el procesamiento de secuencias
+      </p>
+    </div>
+
+    <!-- Diagrama completo -->
+    <div
+      class="mb-20 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700"
+    >
+      <img
+        src="https://www.juansensio.com/blog/064/vit.png"
+        alt="Diagrama completo de la arquitectura Transformer"
+        class="w-full h-auto rounded-lg p-32"
+        loading="lazy"
+      />
+      <div class="mt-4 text-sm text-center text-gray-500 dark:text-gray-400">
+        <p>Arquitectura completa del Transformer (Vaswani et al., 2017)</p>
+      </div>
+    </div>
+
+    <!-- Componentes principales -->
+    <div class="grid md:grid-cols-2 gap-12 mb-20">
+      <!-- Encoder -->
+      <div
+        class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
+      >
+        <h3
+          class="text-2xl font-bold mb-6 text-blue-600 dark:text-cyan-400 flex items-center"
+        >
+          <svg
+            class="w-8 h-8 mr-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+            ></path>
+          </svg>
+          Encoder
+        </h3>
+        <ul class="space-y-4 text-gray-700 dark:text-gray-300">
+          <li class="flex items-start">
+            <div
+              class="bg-blue-100 dark:bg-blue-900/50 rounded-full p-1 mr-3 mt-0.5"
+            >
+              <svg
+                class="w-4 h-4 text-blue-600 dark:text-blue-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span
+              ><strong>Capas idénticas apiladas</strong> (típicamente 6-12)</span
+            >
+          </li>
+          <li class="flex items-start">
+            <div
+              class="bg-blue-100 dark:bg-blue-900/50 rounded-full p-1 mr-3 mt-0.5"
+            >
+              <svg
+                class="w-4 h-4 text-blue-600 dark:text-blue-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span
+              ><strong>Subcapas principales</strong>: Atención multi-cabeza +
+              Red Feed-Forward</span
+            >
+          </li>
+          <li class="flex items-start">
+            <div
+              class="bg-blue-100 dark:bg-blue-900/50 rounded-full p-1 mr-3 mt-0.5"
+            >
+              <svg
+                class="w-4 h-4 text-blue-600 dark:text-blue-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span
+              ><strong>Normalización de capas</strong> y conexiones residuales</span
+            >
+          </li>
+        </ul>
+        <div class="mt-6 bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+          <h4 class="font-semibold text-blue-700 dark:text-blue-300 mb-2">
+            Procesamiento:
+          </h4>
+          <p class="text-sm text-blue-600 dark:text-blue-200">
+            Input → Embedding + Positional Encoding → N × (Multi-Head Attention
+            → Feed Forward)
+          </p>
         </div>
-        <div class="text-center p-6 bg-white shadow-lg rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-          <h3 class="text-2xl font-semibold mb-4 text-black">Inglés</h3>
-          <p class="text-xl text-gray-700">Nivel B1</p>
+      </div>
+
+      <!-- Decoder -->
+      <div
+        class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
+      >
+        <h3
+          class="text-2xl font-bold mb-6 text-purple-600 dark:text-purple-400 flex items-center"
+        >
+          <svg
+            class="w-8 h-8 mr-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+          Decoder
+        </h3>
+        <ul class="space-y-4 text-gray-700 dark:text-gray-300">
+          <li class="flex items-start">
+            <div
+              class="bg-purple-100 dark:bg-purple-900/50 rounded-full p-1 mr-3 mt-0.5"
+            >
+              <svg
+                class="w-4 h-4 text-purple-600 dark:text-purple-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span
+              ><strong>Atención enmascarada</strong> para evitar look-ahead</span
+            >
+          </li>
+          <li class="flex items-start">
+            <div
+              class="bg-purple-100 dark:bg-purple-900/50 rounded-full p-1 mr-3 mt-0.5"
+            >
+              <svg
+                class="w-4 h-4 text-purple-600 dark:text-purple-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span
+              ><strong>Atención encoder-decoder</strong> para conectar con la entrada</span
+            >
+          </li>
+          <li class="flex items-start">
+            <div
+              class="bg-purple-100 dark:bg-purple-900/50 rounded-full p-1 mr-3 mt-0.5"
+            >
+              <svg
+                class="w-4 h-4 text-purple-600 dark:text-purple-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <span><strong>Generación auto-regresiva</strong> en inferencia</span
+            >
+          </li>
+        </ul>
+        <div class="mt-6 bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+          <h4 class="font-semibold text-purple-700 dark:text-purple-300 mb-2">
+            Procesamiento:
+          </h4>
+          <p class="text-sm text-purple-600 dark:text-purple-200">
+            Output → Embedding + Positional Encoding → N × (Masked Multi-Head
+            Attention → Encoder-Decoder Attention → Feed Forward)
+          </p>
         </div>
       </div>
     </div>
-  </section>
-  
-  
-  <section id="Aptitudes" class="about-section bg-gray-100 text-black py-12">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-semibold mb-8">Aptitudes</h2>
-  
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ml-10 mr-10">
-        <div class="bg-white p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200">
-          <h3 class="text-xl font-semibold mb-4">Resolución de problemas</h3>
-          <p class="text-lg">Capacidad para identificar, analizar y resolver problemas de manera eficiente.</p>
+
+    <!-- Mecanismo de Atención -->
+    <div class="mb-20">
+      <h3
+        class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white"
+      >
+        <span class="text-amber-500 dark:text-amber-400"
+          >Mecanismo de Atención</span
+        >
+      </h3>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Self-Attention -->
+        <div
+          class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          <h4
+            class="text-xl font-semibold mb-4 text-amber-600 dark:text-amber-400"
+          >
+            Self-Attention
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Calcula relaciones entre todas las palabras de la entrada
+            simultáneamente:
+          </p>
+          <div
+            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mb-4 overflow-x-auto"
+          >
+            <code class="text-sm text-amber-600 dark:text-amber-300">
+              Attention(Q,K,V) = softmax(QKᵀ/√dₖ)V
+            </code>
+          </div>
+          <ul class="text-gray-700 dark:text-gray-300 space-y-2 text-sm">
+            <li class="flex items-start">
+              <span class="text-amber-500 mr-2">•</span>
+              <span><strong>Q (Query)</strong>: Lo que se está buscando</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-amber-500 mr-2">•</span>
+              <span
+                ><strong>K (Key)</strong>: Lo que contiene la información</span
+              >
+            </li>
+            <li class="flex items-start">
+              <span class="text-amber-500 mr-2">•</span>
+              <span><strong>V (Value)</strong>: La información real</span>
+            </li>
+          </ul>
         </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200">
-          <h3 class="text-xl font-semibold mb-4">Trabajo en equipo</h3>
-          <p class="text-lg">Habilidad para colaborar y aportar al éxito colectivo en proyectos.</p>
+
+        <!-- Multi-Head -->
+        <div
+          class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          <h4
+            class="text-xl font-semibold mb-4 text-amber-600 dark:text-amber-400"
+          >
+            Multi-Head Attention
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Múltiples cabezas de atención permiten enfocarse en diferentes
+            aspectos:
+          </p>
+          <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mb-4">
+            <p class="text-sm text-amber-600 dark:text-amber-300">
+              h = 8 cabezas (en el paper original)
+            </p>
+          </div>
+          <ul class="text-gray-700 dark:text-gray-300 space-y-2 text-sm">
+            <li class="flex items-start">
+              <span class="text-amber-500 mr-2">•</span>
+              <span>Proyecta Q, K, V en h subespacios diferentes</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-amber-500 mr-2">•</span>
+              <span>Calcula atención en paralelo en cada cabeza</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-amber-500 mr-2">•</span>
+              <span>Concatena y proyecta los resultados</span>
+            </li>
+          </ul>
         </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200">
-          <h3 class="text-xl font-semibold mb-4">Adaptabilidad</h3>
-          <p class="text-lg">Facilidad para adaptarme a nuevas tecnologías y entornos de trabajo cambiantes.</p>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200">
-          <h3 class="text-xl font-semibold mb-4">Comunicación efectiva</h3>
-          <p class="text-lg">Habilidad para expresar ideas de manera clara y efectiva tanto verbalmente como por escrito.</p>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200">
-          <h3 class="text-xl font-semibold mb-4">Gestión del tiempo</h3>
-          <p class="text-lg">Capacidad para organizar y gestionar múltiples tareas de forma eficiente y dentro de los plazos establecidos.</p>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:bg-gray-200">
-          <h3 class="text-xl font-semibold mb-4">Atención al detalle</h3>
-          <p class="text-lg">Habilidad para detectar y corregir errores, asegurando la calidad y precisión en el trabajo realizado.</p>
+
+        <!-- Positional Encoding -->
+        <div
+          class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700"
+        >
+          <h4
+            class="text-xl font-semibold mb-4 text-amber-600 dark:text-amber-400"
+          >
+            Positional Encoding
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 mb-4">
+            Añade información sobre la posición en la secuencia:
+          </p>
+          <div
+            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mb-4 overflow-x-auto"
+          >
+            <code class="text-sm text-amber-600 dark:text-amber-300">
+              PE(pos,2i) = sin(pos/10000^(2i/d_model))<br />
+              PE(pos,2i+1) = cos(pos/10000^(2i/d_model))
+            </code>
+          </div>
+          <ul class="text-gray-700 dark:text-gray-300 space-y-2 text-sm">
+            <li class="flex items-start">
+              <span class="text-amber-500 mr-2">•</span>
+              <span>Permite al modelo usar el orden de la secuencia</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-amber-500 mr-2">•</span>
+              <span>Se suma a los embeddings de entrada</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
-  
+
+    <!-- Capa Feed Forward -->
+    <div
+      class="bg-white dark:bg-gray-800 p-10 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700"
+    >
+      <h3
+        class="text-2xl font-bold mb-6 text-green-600 dark:text-green-400 text-center"
+      >
+        Capa Feed Forward
+      </h3>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="text-gray-700 dark:text-gray-300 mb-6">
+            Cada capa de atención va seguida de una red neuronal totalmente
+            conectada:
+          </p>
+          <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mb-6">
+            <code class="text-sm text-green-600 dark:text-green-300">
+              FFN(x) = max(0, xW₁ + b₁)W₂ + b₂
+            </code>
+          </div>
+          <ul class="text-gray-700 dark:text-gray-300 space-y-3">
+            <li class="flex items-start">
+              <div
+                class="bg-green-100 dark:bg-green-900/50 rounded-full p-1 mr-3 mt-0.5"
+              >
+                <svg
+                  class="w-4 h-4 text-green-600 dark:text-green-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span>Aplicada independientemente a cada posición</span>
+            </li>
+            <li class="flex items-start">
+              <div
+                class="bg-green-100 dark:bg-green-900/50 rounded-full p-1 mr-3 mt-0.5"
+              >
+                <svg
+                  class="w-4 h-4 text-green-600 dark:text-green-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span>Dimensión interna típica: 2048 (d_model=512)</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-10">
+          <img
+            src="https://www.researchgate.net/publication/266882116/figure/fig1/AS:649634225614889@1531896277511/Figura-2-Modelo-de-una-red-neuronal-artificial-feedforward-Las-capas-se-componen-en-o.png"
+            alt="Diagrama de capa feed forward"
+            class="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
